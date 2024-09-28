@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Soft background for the page */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Max width for larger screens */
+    background-color: #ffffff; /* White background for contrast */
+    padding: 40px;
+    border-radius: 15px; /* Rounded corners for the profile container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+    align-items: center; /* This ensures the image and details are vertically aligned */
+}
+
+.pet-image {
+    max-width: 40%; /* Adjust the width to fit nicely */
+    margin-right: 40px; /* Adds space between the image and details */
+}
+
+.pet-image img {
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+}
+
+.pet-details {
+    flex-grow: 1; /* Ensures the pet details take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    background-color: #f3eebb; /* Soft background for the details */
+    padding: 20px; /* Add padding for breathing space */
+    border-radius: 10px; /* Rounded corners for the details */
+}
+
+.pet-details h2 {
+    margin-bottom: 20px;
+    color: rgb(49, 55, 100);
+    font-family: "Spicy Rice", serif; /* Custom font for the heading */
+}
+
+.pet-details p {
+    margin-bottom: 12px;
+    font-family: "Spicy Rice", serif;
+    font-size: 1.8rem;
+    color: rgb(49, 55, 100); /* Darker color for text contrast */
+}
+
+.button-container {
+    display: flex; /* Use Flexbox to align the buttons */
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px; /* Adds space above the buttons */
+}
+
+.adopt-button, .back {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for buttons */
+}
+
+.adopt-button:hover, .back:hover {
+    background-color: #45a049; /* Slightly darker on hover */
+}
+
+.back {
+    font-family: "Spicy Rice", serif;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack image and details vertically */
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .pet-image {
+        max-width: 100%; /* Image takes full width */
+        margin: 0 0 20px 0; /* Margin at the bottom for spacing */
+    }
+
+    .pet-details {
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .pet-details h2 {
+        font-size: 1.5rem; /* Smaller heading on mobile */
+    }
+
+    .pet-details p {
+        font-size: 1.2rem; /* Smaller text on mobile */
+    }
+
+    .adopt-button, .back {
+        font-size: 16px; /* Smaller button text on mobile */
+        padding: 10px 20px; /* Smaller padding on buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .pet-details h2 {
+        font-size: 1.3rem; /* Even smaller heading for very small screens */
+    }
+
+    .pet-details p {
+        font-size: 1rem; /* Further reduce text size */
+    }
+
+    .adopt-button, .back {
+        font-size: 14px; /* Smaller button text on very small screens */
+    }
+}
